@@ -10,7 +10,7 @@
 
 @implementation TimeTalkerBird
 
-- (NSDictionary *)currentDate{
++ (NSDictionary *)currentDate{
     
     NSDateComponents *res = [[NSCalendar currentCalendar] components:NSCalendarUnitYear |
                              NSCalendarUnitMonth |
@@ -36,7 +36,7 @@
              };
 }
 
-- (NSUInteger)numberOfDaysInMouth:(NSUInteger)month year:(NSUInteger)year{
++ (NSUInteger)numberOfDaysInMouth:(NSUInteger)month year:(NSUInteger)year{
     
     NSDateComponents *typer = [NSDateComponents new];
     typer.month = month;
@@ -49,7 +49,7 @@
     return duck.length;
 }
 
-- (NSInteger)firstWeekdayInMonth:(NSUInteger)month year:(NSUInteger)year{
++ (NSInteger)firstWeekdayInMonth:(NSUInteger)month year:(NSUInteger)year{
     
     NSDateComponents *typer  = [NSDateComponents new];
     typer.day   = 1;
