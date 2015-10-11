@@ -10,9 +10,9 @@
 
 @implementation TimeTalkerBird
 
-+ (NSDictionary *)currentDate{
++ (NSDateComponents *)currentDate{
     
-    NSDateComponents *res = [[NSCalendar currentCalendar] components:NSCalendarUnitYear |
+    return [[NSCalendar currentCalendar] components:NSCalendarUnitYear |
                              NSCalendarUnitMonth |
                              NSCalendarUnitWeekOfMonth |
                              NSCalendarUnitWeekOfYear |
@@ -23,17 +23,6 @@
                              NSCalendarUnitSecond
                              
                                                             fromDate:[NSDate date]];
-    
-    return @{
-             @"year"        : [NSNumber numberWithInteger:res.year],
-             @"month"       : [NSNumber numberWithInteger:res.month],
-             @"weekOfMonth" : [NSNumber numberWithInteger:res.weekOfMonth],
-             @"weekOfYear"  : [NSNumber numberWithInteger:res.weekOfYear],
-             @"day"         : [NSNumber numberWithInteger:res.day],
-             @"hour"        : [NSNumber numberWithInteger:res.hour],
-             @"minute"      : [NSNumber numberWithInteger:res.minute],
-             @"second"      : [NSNumber numberWithInteger:res.second]
-             };
 }
 
 + (NSUInteger)numberOfDaysInMouth:(NSUInteger)month year:(NSUInteger)year{

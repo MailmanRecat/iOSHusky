@@ -10,7 +10,7 @@
 
 @interface TimeTalkerBird : NSObject
 
-+ (NSDictionary *)currentDate;
++ (NSDateComponents *)currentDate;
 + (NSUInteger)numberOfDaysInMouth:(NSUInteger)month year:(NSUInteger)year;
 + (NSInteger)firstWeekdayInMonth:(NSUInteger)month year:(NSUInteger)year;
 

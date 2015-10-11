@@ -28,6 +28,10 @@ typedef NS_ENUM(NSInteger, SpactecledBearType){
     
     EdgeAroundZero,
     
+    EdgeCenterXY,
+    EdgeCenterX,
+    EdgeCenterY,
+    
     EdgeEqualHeight,
     EdgeEquaWidth,
     EdgeEqualHeightWidth
@@ -42,6 +46,7 @@ typedef NS_ENUM(NSUInteger, SpactecledBearFixedType){
 @interface NSLayoutConstraint (SpectacledBearEdgeConstraint)
 
 + (NSArray *)SpactecledBearEdeg:(UIView *)bear to:(UIView *)toBear type:(SpactecledBearType)type;
++ (NSArray *)SpactecledBearEdeg:(UIView *)bear to:(UIView *)toBear type:(SpactecledBearType)type constant:(CGFloat)constant;
 + (NSArray *)SpactecledBearFixed:(UIView *)target type:(SpactecledBearFixedType)type constant:(CGFloat)constant;
 
 @end
