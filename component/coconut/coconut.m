@@ -47,10 +47,10 @@
     
     self.backgroundColor = [UIColor whiteColor];
     
-    NSDictionary *info = [TimeTalkerBird currentDate];
-    NSInteger    month = [info[@"month"] integerValue] + offset;
-    NSInteger    year  = [info[@"year"] integerValue];
-    NSInteger    day   = [info[@"day"] integerValue];
+    NSDateComponents *date = [TimeTalkerBird currentDate];
+    NSInteger    month = date.month + offset;
+    NSInteger    year  = date.year;
+    NSInteger    day   = date.day;
     
     _selectedDay  = day;
     _currentMonth = month;

@@ -324,4 +324,55 @@
     return cons;
 }
 
++ (NSArray *)spactecledTwoBearFixed:(UIView *)bear anotherBear:(UIView *)anotherBear type:(SpactecledBearFixedType)type{
+    return [self spactecledTwoBearFixed:bear anotherBear:anotherBear type:type multiplier:1.0 constant:0];
+}
+
++ (NSArray *)spactecledTwoBearFixed:(UIView *)bear anotherBear:(UIView *)anotherBear type:(SpactecledBearFixedType)type multiplier:(CGFloat)multiplier constant:(CGFloat)constant{
+    NSMutableArray *cons = [NSMutableArray new];
+    NSLayoutConstraint *con;
+    
+    if( type == SpactecledBearFixedWidth ){
+        con = [NSLayoutConstraint constraintWithItem:bear
+                                           attribute:NSLayoutAttributeWidth
+                                           relatedBy:NSLayoutRelationEqual
+                                              toItem:anotherBear
+                                           attribute:NSLayoutAttributeWidth
+                                          multiplier:multiplier
+                                            constant:constant];
+        [cons addObject:con];
+        
+    }else if( type == SpactecledBearFixedHeight ){
+        con = [NSLayoutConstraint constraintWithItem:bear
+                                           attribute:NSLayoutAttributeHeight
+                                           relatedBy:NSLayoutRelationEqual
+                                              toItem:anotherBear
+                                           attribute:NSLayoutAttributeHeight
+                                          multiplier:multiplier
+                                            constant:constant];
+        [cons addObject:con];
+        
+    }else if( type == SpactecledBearFixedEqual ){
+        con = [NSLayoutConstraint constraintWithItem:bear
+                                           attribute:NSLayoutAttributeWidth
+                                           relatedBy:NSLayoutRelationEqual
+                                              toItem:anotherBear
+                                           attribute:NSLayoutAttributeWidth
+                                          multiplier:multiplier
+                                            constant:constant];
+        [cons addObject:con];
+        con = [NSLayoutConstraint constraintWithItem:bear
+                                           attribute:NSLayoutAttributeHeight
+                                           relatedBy:NSLayoutRelationEqual
+                                              toItem:anotherBear
+                                           attribute:NSLayoutAttributeHeight
+                                          multiplier:multiplier
+                                            constant:constant];
+        [cons addObject:con];
+        
+    }
+    
+    return cons;
+}
+
 @end

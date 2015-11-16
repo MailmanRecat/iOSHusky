@@ -48,5 +48,12 @@ typedef NS_ENUM(NSUInteger, SpactecledBearFixedType){
 + (NSArray *)SpactecledBearEdeg:(UIView *)bear to:(UIView *)toBear type:(SpactecledBearType)type;
 + (NSArray *)SpactecledBearEdeg:(UIView *)bear to:(UIView *)toBear type:(SpactecledBearType)type constant:(CGFloat)constant;
 + (NSArray *)SpactecledBearFixed:(UIView *)target type:(SpactecledBearFixedType)type constant:(CGFloat)constant;
++ (NSArray *)spactecledTwoBearFixed:(UIView *)bear anotherBear:(UIView *)anotherBear type:(SpactecledBearFixedType)type;
++ (NSArray *)spactecledTwoBearFixed:(UIView *)bear
+                        anotherBear:(UIView *)anotherBear
+                               type:(SpactecledBearFixedType)type
+                         multiplier:(CGFloat)multiplier
+                           constant:(CGFloat)constant;
+
 
 @end
