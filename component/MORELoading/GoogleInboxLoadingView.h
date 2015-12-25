@@ -1,6 +1,5 @@
 //
 //  GoogleInboxLoadingView.h
-//  dome12715
 //
 //  Created by caine on 8/8/15.
 //  Copyright (c) 2015 com.caine. All rights reserved.
@@ -13,13 +12,8 @@
 
 @property( nonatomic, assign ) NSTimeInterval  duration;
 @property( nonatomic, strong ) NSArray        *colors;
-//@property( nonatomic, strong ) UIColor        *defaultColor;
-
-- (void)defaultColor:(UIColor *)color;
-
-- (void)ON;
-- (void)OFF;
-- (void)Toggle;
-- (void)Once;
+@property( nonatomic, assign ) BOOL loading;
+@property( nonatomic, assign ) BOOL enable;
 
 @end
+
